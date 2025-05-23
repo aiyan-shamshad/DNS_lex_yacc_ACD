@@ -18,3 +18,19 @@ sudo apt-get install flex bison
 
 # macOS (Homebrew)
 brew install flex bison
+```
+## How to Run
+
+1.Generate lexer and parser:
+```bash
+#flex dns.l
+bison -d dns.y
+```
+2.Compile the code:
+```bash
+gcc lex.yy.c dns.tab.c -o dns_resolver
+```
+3.Execute the program:
+```bash
+./dns_resolver
+```
